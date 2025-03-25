@@ -1,0 +1,30 @@
+name: flutter_lib_test
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  json_annotation: ^4.9.0  # Cập nhật lên phiên bản mới nhất
+  image_picker: ^1.1.1
+  flutter_svg: ^2.0.17
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.11    # Thêm phiên bản cụ thể
+  flutter_gen_runner: ^5.7.0  # Thêm phiên bản cụ thể
+  json_serializable: ^6.8.0   # Cập nhật và tương thích với json_annotation
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/

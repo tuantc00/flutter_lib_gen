@@ -15,6 +15,7 @@ dependencies:
   json_annotation: ^4.9.0  # Cập nhật lên phiên bản mới nhất
   image_picker: ^1.1.1
   flutter_svg: ^2.0.17
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.7.0  # Thêm phiên bản cụ thể
   json_serializable: ^6.8.0   # Cập nhật và tương thích với json_annotation
   flutter_lints: ^5.0.0
+
 flutter_gen:
   line_length: 80
   integrations:

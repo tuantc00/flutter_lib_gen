@@ -15,7 +15,7 @@ class UploadImage extends StatefulWidget {
 }
 
 class _UploadImageState extends State<UploadImage> {
-  String isImageUploade = "";
+  String imageUploaded = "";
   bool isLoading = false;
   @override
   Widget build(BuildContext context) {
@@ -34,16 +34,17 @@ class _UploadImageState extends State<UploadImage> {
                         child: Image.asset(Assets
                             .z6024847751787148cf848f4d7d8cc6d472e9919dd7103
                             .path)),
-                    SvgPicture.asset(Assets.logo),
+                    Assets.logo.svg(),
 
-                    SvgPicture.asset(Assets.splitMode),
-                    isImageUploade == ""
+
+
+                    imageUploaded == ""
                         ? const SizedBox()
                         : SizedBox(
                             height: 350,
                             width: 350,
                             child: Image.network(
-                              isImageUploade,
+                              imageUploaded,
                             ),
                           ),
                     ElevatedButton(
@@ -57,13 +58,12 @@ class _UploadImageState extends State<UploadImage> {
                           setState(() {
                             isLoading = true;
                           });
-                          // it takes some time to uploade images
                           Uint8List bytes = await image.readAsBytes();
                           UploadApiImage()
                               .uploadImage(bytes, image.name)
                               .then((value) {
                             setState(() {
-                              isImageUploade = value['location'].toString();
+                              imageUploaded = value['location'].toString();
                               isLoading = false;
                             });
                             print(
